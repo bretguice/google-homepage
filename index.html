@@ -1,43 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="icon"
+    type="image/png"
+    title="Google, Inc., Public domain, via Wikimedia Commons" 
+    href="https://commons.wikimedia.org/wiki/File:Google-favicon-2015.png">
+</head>
 <style>
- #align-right {
+footer {
+    background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    margin-top: auto;
+ }
+ body {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+
+ }
+ .align-right {
      float: right;
+     margin-right: 60px;
+ }
+ .align-left {
+     float: left;
+     margin-right: 30px;
+
+   }
+   .align-left:first-of-type{
+    margin-left:0px;
+   }
+   .align-right:last-of-type {
+       margin-right: 0px;
+   }
+   .material-icons {
+       margin-top: 0px;
+   }
+ nav a {
+     color: #000;
+     font-family: arial, sans-serif;
+     text-decoration: none;
+     font-size: 13px;
+     cursor: pointer;
+ }
+ footer a {
+     color: #5f6368;
+     font-family: arial, sans-serif;
+     text-decoration: none;
+     font-size: 14px;
+     cursor: pointer;
+     vertical-align: top;
+     
+ }
+ button {
+     cursor: pointer;
+ }
+ 
+ li {
+     display: inline-block;
+ }
+ .foogle {
+     display: block;
+     margin-left: auto;
+     margin-right:auto;
+ }
+ .sign-in-button {
+     background-color: rgb(67, 135, 253);
+     color: white;
+ }
+ .search-bar { 
+     border-radius: 25px;
+     border-color: rgba(0, 0, 0, 0.37);
+     display: block;
+     margin-left:auto;
+     margin-right:auto;
+     height: 30px; 
+     width: 500px;
+     font-family: arial, sans-serif;
+     font-size: 16px;
+     font-stretch: 100%;
+     font-style: normal;
+     font-weight: 400;
+     letter-spacing: normal;
+     
+ }
+ .search-bar:hover{
+     background-color: #fff;
+     box-shadow: 0 1px 6px rgba(32, 33, 36, 28%);
+     border-color: rgba(223, 225, 229, 0);
+ }
+ .search-button{
+     display: block;
+     margin-left:auto;
+     margin-right:auto;
+     margin-top: 30px;
+
  }
 </style>
+
 <nav>
-    <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
-    <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
-    <span class="align-right">
-    <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
-    <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
-    <button>Sign In</button>
-    </span>
+    <ul>
+    <div class="align-left">
+        <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+        <li><a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
+    </div>
+    
+    <div class="align-right">
+        <li><a href="https://mail.google.com/mail/&ogbl">Gmail</a></li>
+        <li><a href="https://www.google.com/imghp?hl=en&ogbl">Images</a></li>
+        <li><i role="button" class="material-icons">apps</i></li>
+        <li><button class="sign-in-button" >Sign In</button></li>
+    </div>
+    </ul>
+   
 
 
 </nav>
 
 <body>
 <div id="main-content">
-    <center>
-    <img alt="Foogle" height="92" id="logo" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/284f0cdc998be7e4751e29e8458323ad5d320303/foundations/the_front_end/project_html_css/imgs/00.png"
-    style="padding-top: 109px" width="272">
-    </center>
-    <center>
-    <input type="search" width="272">  
-    <div>
-    <button>Search</button>  <button>I'm Feeling Lucky</button>
-    </center>
-    </div>
+    
+        <img class="foogle" alt="Foogle" height="92" id="logo" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/284f0cdc998be7e4751e29e8458323ad5d320303/foundations/the_front_end/project_html_css/imgs/00.png"
+        style="padding-top: 109px" width="272">
+        <input class="search-bar" type="text" width="272"> 
+        <button class="search-button" id="search-button">Search</button>  <button class="search-button" id="feeling-lucky">I'm Feeling Lucky</button>
+    
+    
 </div>
 
 </body>
+<div>
 <footer>
-    <a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
-    <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
-    <a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a>
-    <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
-    <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
-    <a href="#Settings">Settings</a>
+    <ul>
+    <span class="align-left">
+        <li><a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+        <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+        <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></li>
+    </span>
+    <span class="align-right">
+        <li><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></li>
+        <li><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></li>
+        <li><a href="#Settings">Settings</a></li>
+    </span>
+    </ul>
 </footer>
+</div>
 </html>
